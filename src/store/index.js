@@ -1,8 +1,10 @@
 import { createStore } from "vuex";
 
-export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
+const stroe = createStore({
+  state: {
+    name: "张三",
+    age: 78,
+  },
 });
+
+export default stroe;
