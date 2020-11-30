@@ -18,7 +18,8 @@
         <router-link to="/useStore">useStore</router-link> |
         <router-link to="/getElement">获取标签元素</router-link> |
         <router-link to="/todolist">TODOLIST</router-link> |
-        <router-link to="/todolist02">TODOLIST02</router-link>
+        <router-link to="/todolist02">TODOLIST02</router-link> |
+        <router-link to="/testindex">测试DEMO</router-link>
     </div>
     <router-view />
 </template>
