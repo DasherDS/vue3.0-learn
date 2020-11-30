@@ -1,22 +1,21 @@
 <template>
     <div id="nav">
         <vue-particles
-            color="#dedede"
+            color="#fff"
             :particleOpacity="0.7"
-            :particlesNumber="40"
+            :particlesNumber="60"
             shapeType="star"
             :particleSize="4"
-            linesColor="#FFFFFF"
-            :linesWidth="2"
+            linesColor="#fff"
+            :linesWidth="1"
             :lineLinked="true"
             :lineOpacity="0.4"
             :linesDistance="150"
-            :moveSpeed="3"
+            :moveSpeed="2"
             :hoverEffect="true"
             hoverMode="grab"
             :clickEffect="true"
             clickMode="push"
-            class="cash"
         >
         </vue-particles>
         <div class="main">
@@ -78,6 +77,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+    background-image: radial-gradient(#e1e4e7, #a0a2a3);
 }
 .main {
     position: relative;
