@@ -106,6 +106,7 @@ export default {
     padding: 30px;
 
     a {
+        line-height: 30px;
         transition: 0.8s;
         font-weight: bold;
         color: #4e4e4e;
