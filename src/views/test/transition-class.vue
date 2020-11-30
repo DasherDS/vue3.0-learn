@@ -2,7 +2,6 @@
     <div class="warp">
         <el-slider class="slider" v-model="sliderVal"></el-slider>
         {{ sliderVal }}
-
         <div class="hiddenbox">
             <div :class="sliderVal > 50 ? 'search2' : 'search1'"></div>
             <div :class="sliderVal > 50 ? 'move1' : 'move2'"></div>

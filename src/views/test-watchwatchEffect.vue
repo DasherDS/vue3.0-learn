@@ -1,11 +1,13 @@
 <template>
     <div>
-        <p>{{ txt }}</p>
+        <div>
+            <p>{{ txt }}</p>
+        </div>
+        <WatchRef />
+        <WatchReactive />
+        <WatchMore />
+        <WatchEffectTest />
     </div>
-    <WatchRef />
-    <WatchReactive />
-    <WatchMore />
-    <WatchEffectTest />
 </template>
 
 <script>

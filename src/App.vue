@@ -31,9 +31,9 @@
             <router-link to="/shallowRef">shallowRef</router-link> |
             <router-link to="/toRaw">toRaw</router-link> |
             <router-link to="/markRaw">markRaw</router-link> |
-            <router-link to="/provideinject">provide && inject</router-link> |
+            <router-link to="/provideinject">provide & inject</router-link> |
             <router-link to="/watchwatchEffect"
-                >watch && watchEffect</router-link
+                >watch & watchEffect</router-link
             >
             |
             <router-link to="/getCurrentInstance"
@@ -43,11 +43,55 @@
             <router-link to="/getElement">获取标签元素</router-link> |
             <router-link to="/todolist">TODOLIST</router-link> |
             <router-link to="/todolist02">TODOLIST02</router-link> |
-            <router-link to="/testindex">测试DEMO</router-link>
-            <router-view />
+            <router-link to="/testindex">测试DEMO</router-link> |
+            <el-tooltip
+                class="item"
+                effect="dark"
+                :content="txtTip"
+                placement="bottom"
+            >
+                <el-button @click="jump" size="small" type="primary"
+                    >点击跳转</el-button
+                >
+            </el-tooltip>
+            <!-- <transition :name="transitionName">
+                <router-view> </router-view>
+            </transition> -->
+            <router-view v-slot="{ Component }">
+                <transition :name="transitionName" mode="out-in">
+                    <component :is="Component"></component>
+                </transition>
+            </router-view>
         </div>
     </div>
 </template>
+
+<script>
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+export default {
+    setup() {
+        let router = useRouter();
+        const txtTip = `点击直接跳转路由，测试编程式路由`;
+        const transitionName = ref("");
+        console.log(router);
+        function jump() {
+            router.push({ name: "TransitionTlass" });
+        }
+
+        router.afterEach((to, from) => {
+            if (to.meta.index > from.meta.index) {
+                transitionName.value = "fold-left";
+            }
+            if (to.meta.index < from.meta.index) {
+                transitionName.value = "fold-right";
+            }
+        });
+
+        return { jump, txtTip, transitionName };
+    },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -62,14 +106,19 @@
     padding: 30px;
 
     a {
+        transition: 0.8s;
         font-weight: bold;
-        color: #2c3e50;
-
-        &.router-link-exact-active {
-            color: #42b983;
+        color: #4e4e4e;
+        // -exact
+        &.router-link-active {
+            color: #4276b9;
         }
     }
+    a:hover {
+        color: #4276b9;
+    }
 }
+//粒子效果的css设置为背景
 .particles-js-canvas-el {
     position: fixed;
     top: 0;
@@ -81,5 +130,54 @@
 }
 .main {
     position: relative;
+}
+//以下是页面路由切换的动画
+.fold-left-enter-active {
+    animation-name: fold-left-in;
+    animation-duration: 0.3s;
+}
+.fold-left-leave-active {
+    animation-name: fold-left-out;
+    animation-duration: 0.3s;
+}
+.fold-right-enter-active {
+    animation-name: fold-right-in;
+    animation-duration: 0.3s;
+}
+.fold-right-leave-active {
+    animation-name: fold-right-out;
+    animation-duration: 0.3s;
+}
+@keyframes fold-right-in {
+    0% {
+        transform: translate3d(100%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fold-right-out {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+@keyframes fold-left-in {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fold-left-out {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
 </style>
