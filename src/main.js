@@ -6,9 +6,10 @@ import router from "./router";
 import store from "./store";
 import VueParticles from "vue-particles"
 
+
 createApp(App)
-  .use(store)
-  .use(router)
-  .use(ElementPlus)
-  .use(VueParticles)
-  .mount("#app");
+App.use(store)
+App.use(router)
+App.use(ElementPlus)
+App.use(VueParticles)
+App.mount("#app");
