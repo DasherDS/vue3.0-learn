@@ -1,27 +1,53 @@
 <template>
     <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/ref">Ref</router-link> |
-        <router-link to="/ref02">Ref02</router-link> |
-        <router-link to="/lifecycle">生命周期</router-link> |
-        <router-link to="/reactive">reactive</router-link> |
-        <router-link to="/toRef">toRef</router-link> |
-        <router-link to="/toRefs">toRefs</router-link> |
-        <router-link to="/shallowReactive">shallowReactive</router-link> |
-        <router-link to="/shallowRef">shallowRef</router-link> |
-        <router-link to="/toRaw">toRaw</router-link> |
-        <router-link to="/markRaw">markRaw</router-link> |
-        <router-link to="/provideinject">provide && inject</router-link> |
-        <router-link to="/watchwatchEffect">watch && watchEffect</router-link> |
-        <router-link to="/getCurrentInstance">getCurrentInstance</router-link> |
-        <router-link to="/useStore">useStore</router-link> |
-        <router-link to="/getElement">获取标签元素</router-link> |
-        <router-link to="/todolist">TODOLIST</router-link> |
-        <router-link to="/todolist02">TODOLIST02</router-link> |
-        <router-link to="/testindex">测试DEMO</router-link>
+        <vue-particles
+            color="#dedede"
+            :particleOpacity="0.7"
+            :particlesNumber="40"
+            shapeType="star"
+            :particleSize="4"
+            linesColor="#FFFFFF"
+            :linesWidth="2"
+            :lineLinked="true"
+            :lineOpacity="0.4"
+            :linesDistance="150"
+            :moveSpeed="3"
+            :hoverEffect="true"
+            hoverMode="grab"
+            :clickEffect="true"
+            clickMode="push"
+            class="cash"
+        >
+        </vue-particles>
+        <div class="main">
+            <router-link to="/">Home</router-link> |
+            <router-link to="/about">About</router-link> |
+            <router-link to="/ref">Ref</router-link> |
+            <router-link to="/ref02">Ref02</router-link> |
+            <router-link to="/lifecycle">生命周期</router-link> |
+            <router-link to="/reactive">reactive</router-link> |
+            <router-link to="/toRef">toRef</router-link> |
+            <router-link to="/toRefs">toRefs</router-link> |
+            <router-link to="/shallowReactive">shallowReactive</router-link> |
+            <router-link to="/shallowRef">shallowRef</router-link> |
+            <router-link to="/toRaw">toRaw</router-link> |
+            <router-link to="/markRaw">markRaw</router-link> |
+            <router-link to="/provideinject">provide && inject</router-link> |
+            <router-link to="/watchwatchEffect"
+                >watch && watchEffect</router-link
+            >
+            |
+            <router-link to="/getCurrentInstance"
+                >getCurrentInstance</router-link
+            >
+            | <router-link to="/useStore">useStore</router-link> |
+            <router-link to="/getElement">获取标签元素</router-link> |
+            <router-link to="/todolist">TODOLIST</router-link> |
+            <router-link to="/todolist02">TODOLIST02</router-link> |
+            <router-link to="/testindex">测试DEMO</router-link>
+            <router-view />
+        </div>
     </div>
-    <router-view />
 </template>
 
 <style lang="scss">
@@ -44,5 +70,16 @@
             color: #42b983;
         }
     }
+}
+.particles-js-canvas-el {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.main {
+    position: relative;
 }
 </style>
