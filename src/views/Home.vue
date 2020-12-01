@@ -4,7 +4,7 @@
     <div>
       <h3>天气展示</h3>
       <p v-if="states.city">
-        你所在的城市是{{ states.city }}, 
+        你搜索城市是{{ states.city }}, 
         今天是{{ states.date}}{{ states.week }}, 
         天气{{ states.wea }},{{ states.win}}{{ states.win_speed }}, 风速{{ states.wen_meter }},
         空气{{states.air_level}},pm2.5{{ states.air }},
@@ -16,6 +16,7 @@
                   placeholder="请输入城市"></el-input>
         <el-button @click="getDatas">获取</el-button>
         <el-button @click="setVuex">存到vuex</el-button>
+        <el-button @click="show">展示</el-button>
       </span>
     </div>
 
@@ -28,7 +29,6 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 import { weatherHooks } from "../hooks/weather";
 import { useStore } from 'vuex';
-// import { reactive, watchEffect } from "vue";
 export default {
   name: "Home",
   components: {
@@ -37,7 +37,10 @@ export default {
   setup () {
     const store = useStore()
     const { getDatas, reqcity, setVuex, states } = weatherHooks();
-    return { states, getDatas, reqcity, setVuex };
+    function show(){
+        console.log(states);
+    }
+    return { states, getDatas, reqcity, setVuex,show };
   },
 };
 </script>

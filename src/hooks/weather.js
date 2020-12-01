@@ -2,6 +2,7 @@ import { reactive, ref } from "vue"
 import { useStore } from "vuex"
 import { setStorage, getStorage } from "../utils/storage"
 import { weatherRequest } from "../api/tianqi"
+import { Message } from "element-plus"
 export function weatherHooks (city) {
     const store = useStore()
     const reqcity = ref(city)
@@ -16,8 +17,7 @@ export function weatherHooks (city) {
     async function setVuex () {
         let storageData = getStorage('stroage_weather')
         await store.dispatch("setWeatherStore", JSON.parse(storageData))
-        states = store.state.weather_store
-        console.log(states);
+        states = store.state.weather_store 
     }
     return { getDatas, reqcity, setVuex, states }
 
