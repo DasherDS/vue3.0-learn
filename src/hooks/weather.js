@@ -1,22 +1,24 @@
-import { ref } from "vue"
+import { reactive, ref } from "vue"
 import { useStore } from "vuex"
 import { setStorage, getStorage } from "../utils/storage"
 import { weatherRequest } from "../api/tianqi"
-export function weatherHooks(city) {
+export function weatherHooks (city) {
     const store = useStore()
     const reqcity = ref(city)
     let weather = store.state.weather_store
+    let states = reactive(weather)
     //获取数据存储到 本地
-    async function getDatas() {
+    async function getDatas () {
         let res = await weatherRequest(reqcity.value)
         setStorage('stroage_weather', res)
     }
     //从本地获取存储到vuex
-    async function setVuex() {
+    async function setVuex () {
         let storageData = getStorage('stroage_weather')
         await store.dispatch("setWeatherStore", JSON.parse(storageData))
-        weather = store.state.weather_store
+        states = store.state.weather_store
+        console.log(states);
     }
-    return { getDatas, reqcity, setVuex, weather }
+    return { getDatas, reqcity, setVuex, states }
 
 }

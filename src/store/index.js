@@ -1,5 +1,4 @@
 import { createStore } from "vuex";
-
 const stroe = createStore({
     state: {
         name: "张三",
