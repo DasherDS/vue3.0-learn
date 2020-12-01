@@ -4,6 +4,7 @@
         <router-link to="/transitionclass" target="_blank">
             <el-button type="primary">过渡效果的class</el-button>
         </router-link>
+        <el-button @click="handleReq" type="danger">测试请求接口</el-button>
         <div class="lang">
             <h3>测试国际化(插件I18n)</h3>
             <ul>
@@ -20,13 +21,19 @@
 </template>
 
 <script>
+import { useRouter } from "vue-router";
 export default {
-    setup(props,ctx) {
+    setup(props, ctx) {
+        const router = useRouter();
         function chinese() {
-            console.log(props,ctx);
+            console.log(props, ctx);
         }
         function english() {}
-        return { english, chinese };
+        function handleReq() {
+            console.log(router);
+            router.push({ name: "Request" });
+        }
+        return { english, chinese, handleReq };
     },
 };
 </script>

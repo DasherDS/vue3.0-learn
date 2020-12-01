@@ -1,6 +1,8 @@
 <template>
     <div>
         <p>{{ txt }}</p>
+
+        <strong>useStore 其实内部是通过 vue.inject 进行注入的,所有useStore只能在setup中使用</strong>
     </div>
 </template>
 

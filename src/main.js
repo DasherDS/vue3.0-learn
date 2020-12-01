@@ -8,8 +8,8 @@ import VueParticles from "vue-particles"
 
 
 createApp(App)
-App.use(store)
-App.use(router)
-App.use(ElementPlus)
-App.use(VueParticles)
-App.mount("#app");
+    .use(store)
+    .use(router)
+    .use(ElementPlus)
+    .use(VueParticles)
+    .mount("#app");
