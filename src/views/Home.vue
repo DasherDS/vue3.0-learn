@@ -34,10 +34,7 @@ export default {
     HelloWorld,
   },
   setup () {
-    const { getDatas, reqcity, setVuex, states } = weatherHooks();
-    function show(){
-        console.log(states);
-    }
+    const { getDatas, reqcity, setVuex, states,show } = weatherHooks();
     return { states, getDatas, reqcity, setVuex,show };
   },
 };
