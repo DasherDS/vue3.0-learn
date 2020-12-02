@@ -11,6 +11,7 @@ import { reactive } from "vue";
  * reactive 方法是用来创建一个响应式的数据对象，该API也很好地解决了Vue2通过 defineProperty 实现数据响应式的缺陷
  * 
  * 特别注意：reactive是用来定义更加复杂的数据类型，但是定义后里面的变量取出来就不在是响应式Ref对象数据了
+ * 如本项目的 hooks文件夹下的weather中的   let states = ref(weather)  如果改成reactive  在吧本地缓存的数据付给reactive时  就不少响应式数据了
  */
 export default {
     name: "Reactive",
