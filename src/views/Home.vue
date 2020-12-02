@@ -7,7 +7,7 @@
         你搜索城市是{{ states.city }}, 
         今天是{{ states.date}}{{ states.week }}, 
         天气{{ states.wea }},{{ states.win}}{{ states.win_speed }}, 风速{{ states.wen_meter }},
-        空气{{states.air_level}},pm2.5{{ states.air }},
+        空气{{states.air_level}},pm2.5:{{ states.air }},
         <b>{{ states.air_tips }}</b>
       </p>
       <span>

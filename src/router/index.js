@@ -176,6 +176,11 @@ const routes = [
                 path:"/vuexproxy",
                 name:"Vuexproxy",
                 component:()=> import("../views/test/test-proxyvuex.vue")
+            },
+            {
+                path:"/antuitest",
+                name:"AntUI",
+                component:() =>import("../views/test/antUItest.vue")
             }
         ]
     }
