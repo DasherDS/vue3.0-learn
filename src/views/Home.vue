@@ -12,11 +12,12 @@
             </p>
             <span>
                 <h2 v-if="!states.city">如果没有数据请先点击获取再点击存到vuex</h2>
-                <a-input
-                    v-model="reqcity"
+                <!-- <a-input
+                    v-model:reqcity="reqcity"
                     placeholder="请输入城市"
                     class="city"
-                ></a-input>
+                ></a-input> -->
+                <input type="text" v-model="reqcity" placeholder="请输入想搜索的城市">
                 <a-button @click="getDatas">获取</a-button>
                 <a-button @click="setVuex">存到vuex</a-button>
             </span>
@@ -56,6 +57,7 @@ export default {
     setup() {
         const str = ref("父组件打开文字");
         const visible = ref(false);
+        const { getDatas, reqcity, setVuex, states } = weatherHooks(reqcity);
         function showModal() {
             visible.value = true;
         }
@@ -68,7 +70,6 @@ export default {
             str.value = val.str;
             console.log(val);
         }
-        const { getDatas, reqcity, setVuex, states } = weatherHooks();
         return {
             states,
             getDatas,
