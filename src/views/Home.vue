@@ -11,7 +11,7 @@
         <b>{{ states.air_tips }}</b>
       </p>
       <span>
-        <h2>如果没有数据请点击获取数据</h2>
+        <h2>如果没有数据请先点击获取再点击存到vuex</h2>
         <a-input v-model="reqcity"
                   placeholder="请输入城市"></a-input>
         <a-button @click="getDatas">获取</a-button>
