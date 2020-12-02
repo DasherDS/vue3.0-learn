@@ -12,11 +12,10 @@
       </p>
       <span>
         <h2>如果没有数据请点击获取数据</h2>
-        <el-input v-model="reqcity"
-                  placeholder="请输入城市"></el-input>
-        <el-button @click="getDatas">获取</el-button>
-        <el-button @click="setVuex">存到vuex</el-button>
-        <el-button @click="show">展示</el-button>
+        <a-input v-model="reqcity"
+                  placeholder="请输入城市"></a-input>
+        <a-button @click="getDatas">获取</a-button>
+        <a-button @click="setVuex">存到vuex</a-button>
       </span>
     </div>
 
@@ -34,8 +33,8 @@ export default {
     HelloWorld,
   },
   setup () {
-    const { getDatas, reqcity, setVuex, states,show } = weatherHooks();
-    return { states, getDatas, reqcity, setVuex,show };
+    const { getDatas, reqcity, setVuex, states } = weatherHooks();
+    return { states, getDatas, reqcity, setVuex};
   },
 };
 </script>

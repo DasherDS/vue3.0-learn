@@ -2,15 +2,12 @@
     <div>
         <h3>测试vuex响应式的页面</h3>
         <div class="test">
-            <el-progress
-                :percentage="number.num"
-                status="success"
-            ></el-progress>
-            <el-button type="success" @click="addnum">增加</el-button>
+            <a-progress :percent="number.num" status="active" />
+            <a-button type="success" @click="addnum">增加</a-button>
             <hr />
-            <el-progress :percentage="numberHooks.num"></el-progress>
-            <el-button type="danger" @click="hooksaddnum"
-                >vuexhooks增加</el-button
+            <a-progress type="circle" :percent="numberHooks.num"/>
+            <a-button type="danger" @click="hooksaddnum"
+                >vuexhooks增加</a-button
             >
         </div>
     </div>

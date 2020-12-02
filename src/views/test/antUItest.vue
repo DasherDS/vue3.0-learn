@@ -2,7 +2,7 @@
     <div>
         <h1>AntUI</h1>
         <a-button type="primary" shape="round" @click="msgClick"> Primary </a-button>
-        <el-button type="primary" @click="msgClick2">Primary</el-button>
+        <a-button type="primary" @click="msgClick2">Primary</a-button>
     </div>
 </template>
 

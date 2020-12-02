@@ -4,18 +4,18 @@
         <ul>
             <li>
                 <router-link to="/transitionclass" target="_blank">
-                    <el-button type="primary">过渡效果的class</el-button>
+                    <a-button type="primary">过渡效果的class</a-button>
                 </router-link>
             </li>
             <li>
-                <i class="el-icon-s-grid"></i>
+                <i class="a-icon-s-grid"></i>
                 <router-link to="/vuexproxy">
-                    <el-tag type="success">vuex测试</el-tag>
+                    <a-tag type="success">vuex测试</a-tag>
                 </router-link>
             </li>
             <li>
-                <el-button @click="handleReq" type="danger"
-                    >测试请求接口</el-button
+                <a-button @click="handleReq" type="danger"
+                    >测试请求接口</a-button
                 >
             </li>
             <li>
@@ -42,8 +42,8 @@
                     <a-calendar :fullscreen="false" :value="datevalue" />
                 </div>
             </a-config-provider>
-            <el-button @click="chinese">中文</el-button>
-            <el-button @click="english">english</el-button>
+            <a-button @click="chinese">中文</a-button>
+            <a-button @click="english">english</a-button>
         </div>
         <router-view />
     </div>

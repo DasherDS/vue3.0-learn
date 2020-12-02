@@ -1,9 +1,9 @@
 <template>
     <div>请求接口</div>
-    <span> 输入城市<el-input type="text" v-model="iptCity" /> </span>
-    <el-button @click="getWeather">获取天气</el-button>
+    <span> 输入城市<a-input type="text" v-model="iptCity" /> </span>
+    <a-button @click="getWeather">获取天气</a-button>
 
-    <el-button @click="setVuex">存vuex</el-button>
+    <a-button @click="setVuex">存vuex</a-button>
 </template>
 
 <script>

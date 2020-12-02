@@ -22,9 +22,6 @@ export function weatherHooks(city) {
         store.dispatch("setWeatherStore", states.value)
         
     }
-    function show() {
-        // console.log(states.value);
-    }
-    return { getDatas, reqcity, setVuex, states, show }
+    return { getDatas, reqcity, setVuex, states }
 
 }

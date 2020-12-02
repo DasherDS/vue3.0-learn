@@ -1,6 +1,6 @@
 <template>
     <div class="warp">
-        <el-slider class="slider" v-model="sliderVal"></el-slider>
+        <a-slider class="slider" v-model:value="sliderVal" />
         {{ sliderVal }}
         <div class="hiddenbox">
             <div :class="sliderVal > 50 ? 'search2' : 'search1'"></div>
@@ -43,7 +43,7 @@ export default {
         background-color: skyblue;
     }
     .hiddenbox {
-        div{
+        div {
             border-radius: 10px;
         }
         display: flex;

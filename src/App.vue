@@ -44,19 +44,12 @@
             <router-link to="/todolist">TODOLIST</router-link> |
             <router-link to="/todolist02">TODOLIST02</router-link> |
             <router-link to="/testindex">测试DEMO</router-link> |
-            <el-tooltip
-                class="item"
-                effect="dark"
-                :content="txtTip"
-                placement="bottom"
-            >
-                <el-button @click="jump" size="small" type="primary"
-                    >点击跳转</el-button
-                >
-            </el-tooltip>
-            <!-- <transition :name="transitionName">
-                <router-view> </router-view>
-            </transition> -->
+            <a-tooltip placement="bottom">
+                <template #title>
+                    <span> {{txtTip}}</span>
+                </template>
+                <a-button @click="jump" size="small" type="primary">点击跳转</a-button>
+            </a-tooltip>
             <router-view v-slot="{ Component }">
                 <transition :name="transitionName" mode="out-in">
                     <component :is="Component"></component>
@@ -74,8 +67,8 @@ export default {
         let router = useRouter();
         const txtTip = `点击直接跳转路由，测试编程式路由`;
         const transitionName = ref("");
-        console.log(router);
         function jump() {
+            console.log(router);
             router.push({ name: "TransitionTlass" });
         }
 
