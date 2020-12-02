@@ -1,14 +1,6 @@
 <template>
     <div class="hello">
         <h1>{{ msg }}</h1>
-        <p>
-            For a guide and recipes on how to configure / customize this
-            project,<br />
-            check out the
-            <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-                >vue-cli documentation</a
-            >.
-        </p>
         <h3>vue3 资源</h3>
         <ul>
             <li>
@@ -17,117 +9,29 @@
                 >
             </li>
             <li>
-                <a href="https://element-plus.org/#/zh-CN/component/installation" target="_blank" rel="noopener"
+                <a
+                    href="https://2x.antdv.com/components/tooltip-cn/"
+                    target="_blank"
+                    rel="noopener"
+                    >AntDesign-vue2.x</a
+                >
+            </li>
+            <li>
+                <a
+                    href="https://element-plus.org/#/zh-CN/component/installation"
+                    target="_blank"
+                    rel="noopener"
                     >element-plus</a
                 >
             </li>
         </ul>
-        <h3>Installed CLI Plugins</h3>
-        <ul>
-            <li>
-                <a
-                    href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-                    target="_blank"
-                    rel="noopener"
-                    >babel</a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
-                    target="_blank"
-                    rel="noopener"
-                    >router</a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex"
-                    target="_blank"
-                    rel="noopener"
-                    >vuex</a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-                    target="_blank"
-                    rel="noopener"
-                    >eslint</a
-                >
-            </li>
-        </ul>
-        <h3>Essential Links</h3>
-        <ul>
-            <li>
-                <a href="https://vuejs.org" target="_blank" rel="noopener"
-                    >Core Docs</a
-                >
-            </li>
-            <li>
-                <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-                    >Forum</a
-                >
-            </li>
-            <li>
-                <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-                    >Community Chat</a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://twitter.com/vuejs"
-                    target="_blank"
-                    rel="noopener"
-                    >Twitter</a
-                >
-            </li>
-            <li>
-                <a href="https://news.vuejs.org" target="_blank" rel="noopener"
-                    >News</a
-                >
-            </li>
-        </ul>
-        <h3>Ecosystem</h3>
-        <ul>
-            <li>
-                <a
-                    href="https://router.vuejs.org"
-                    target="_blank"
-                    rel="noopener"
-                    >vue-router</a
-                >
-            </li>
-            <li>
-                <a href="https://vuex.vuejs.org" target="_blank" rel="noopener"
-                    >vuex</a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://github.com/vuejs/vue-devtools#vue-devtools"
-                    target="_blank"
-                    rel="noopener"
-                    >vue-devtools</a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://vue-loader.vuejs.org"
-                    target="_blank"
-                    rel="noopener"
-                    >vue-loader</a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://github.com/vuejs/awesome-vue"
-                    target="_blank"
-                    rel="noopener"
-                    >awesome-vue</a
-                >
-            </li>
-        </ul>
+        <hr />
+        <div>
+            <h4>使用子组件控制父组件的dialog</h4>
+            <a-button type="danger" @click="dialogs"
+                >弹出(子组件的按钮)</a-button
+            >
+        </div>
     </div>
 </template>
 
@@ -136,6 +40,16 @@ export default {
     name: "HelloWorld",
     props: {
         msg: String,
+    },
+    setup(props, ctx) {
+        let ziobj = {
+            str: "子组件调用打开,子组件调用打开子组件调用打开,子组件调用打开子组件，",
+            visible: true,
+        };
+        function dialogs() {
+            ctx.emit("opendialog", ziobj);
+        }
+        return { dialogs };
     },
 };
 </script>
