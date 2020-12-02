@@ -2,7 +2,6 @@ import { reactive, ref } from "vue"
 import { useStore } from "vuex"
 import { setStorage, getStorage } from "../utils/storage"
 import { weatherRequest } from "../api/tianqi"
-import { Message } from "element-plus"
 export function weatherHooks (city) {
     const store = useStore()
     const reqcity = ref(city)

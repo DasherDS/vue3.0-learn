@@ -28,14 +28,12 @@
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
 import { weatherHooks } from "../hooks/weather";
-import { useStore } from 'vuex';
 export default {
   name: "Home",
   components: {
     HelloWorld,
   },
   setup () {
-    const store = useStore()
     const { getDatas, reqcity, setVuex, states } = weatherHooks();
     function show(){
         console.log(states);

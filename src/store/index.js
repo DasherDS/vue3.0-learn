@@ -18,16 +18,34 @@ const stroe = createStore({
         //     win_meter: '',
         //     win_speed: ''
         // }
-        weather_store:JSON.parse(getStorage('stroage_weather')) || {}
+        weather_store:JSON.parse(getStorage('stroage_weather')) || {},
+        testNum:{
+            num:0
+        },
+        hookstestNum:{
+            num:0
+        }
     },
     mutations: {
         SET_WEATHER(state, data) {
             state.weather_store = data
-        }
+        },
+        SET_NUM(state,data){
+            state.testNum = data
+        },
+        SET_NUM_HOOKS(state,data){
+            state.hookstestNum = data
+        }   
     },
     actions: {
         setWeatherStore({ commit }, datas) {
             commit('SET_WEATHER', datas)
+        },
+        setNum({ commit },datas){
+            commit('SET_NUM',datas)
+        },
+        hookssetNum({ commit },datas){
+            commit('SET_NUM_HOOKS',datas)
         }
     }
 });
