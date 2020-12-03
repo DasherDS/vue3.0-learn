@@ -6,7 +6,7 @@
             <p v-if="states.city" class="weather">
                 你搜索城市是<span>{{ states.city }}</span>, 今天是<span>{{ states.date
                 }}</span><span>{{ states.week }}</span>, 天气<span>{{ states.wea }}</span>,<span>{{ states.win
-                }}</span><span>{{ states.win_speed }}</span>, 风速<span>{{ states.wen_meter }}</span>, 
+                }}</span><span>{{ states.win_speed }}</span>, 风速<span>{{ states.win_meter }}</span>, 
                 空气<span>{{states.air_level}}</span>,pm2.5:<span>{{ states.air }}</span>,<br>
                 <b><span>{{ states.air_tips }}</span></b>
             </p>
