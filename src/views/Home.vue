@@ -18,8 +18,8 @@
                     class="city"
                 ></a-input> -->
                 <input type="text" v-model="reqcity" placeholder="请输入想搜索的城市">
-                <a-button @click="getDatas">获取</a-button>
-                <a-button @click="setVuex">存到vuex</a-button>
+                <a-button @click="getDatas" type="default" >获取</a-button>
+                <a-button @click="setVuex" type="danger">存到vuex</a-button>
             </span>
         </div>
         <HelloWorld msg="vue3.0" @opendialog="opendialog" />
