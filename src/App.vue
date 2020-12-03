@@ -43,6 +43,7 @@
             <router-link to="/getElement">获取标签元素</router-link> |
             <router-link to="/todolist">TODOLIST</router-link> |
             <router-link to="/todolist02">TODOLIST02</router-link> |
+            <router-link to="/computed">computed-计算属性</router-link> |
             <router-link to="/testindex">测试DEMO</router-link> |
             <a-tooltip placement="bottom">
                 <template #title>

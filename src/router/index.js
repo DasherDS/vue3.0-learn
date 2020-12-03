@@ -155,6 +155,14 @@ const routes = [
         }
     },
     {
+        path:"/computed",
+        name:"Computed",
+        component: ()=> import("../views/test-computed.vue"),
+        meta:{
+            index:20
+        }
+    },
+    {
         path: "/testindex",
         name: "Testindex",
         component: () => import("../views/test/index.vue"),
