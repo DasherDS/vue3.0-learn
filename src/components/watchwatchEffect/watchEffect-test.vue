@@ -1,5 +1,10 @@
 <template>
-    <div></div>
+    <div>
+        <span class="txt">
+            {{state.count}}---{{state.name}}
+        </span>
+        
+    </div>
 </template>
 
 <script>
@@ -14,12 +19,14 @@ export default {
         watchEffect(() => {
             console.log(state.count);
             console.log(state.name);
+            console.log(state);
         });
 
         setTimeout(() => {
             state.count++;
-            state.name = "永恒不灭";
+            state.name += "，昂扬不灭";
         }, 1000);
+        return { state }
     },
     /**
      * 从上述代码中可以看出，我们并没有像 watch 方法一样先给其传入一个依赖，
@@ -29,6 +36,9 @@ export default {
      */
 };
 </script>
-
-<style>
+<style lang="scss" scoped>
+.txt{
+    color: #c9483c;
+    font-size: 18px;
+}
 </style>
