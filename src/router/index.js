@@ -171,6 +171,14 @@ const routes = [
         }
     },
     {
+        path:"/nextTick",
+        name:"NextTick",
+        component:()=>import("../views/test-nextTick.vue"),
+        meta:{
+            index:22
+        }
+    },
+    {
         path: "/testindex",
         name: "Testindex",
         component: () => import("../views/test/index.vue"),

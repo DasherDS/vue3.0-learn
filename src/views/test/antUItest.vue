@@ -8,6 +8,7 @@
 
 <script>
 import { message } from 'ant-design-vue';
+import { nextTick } from 'vue';
 export default {
     name: "AntUI",
     setup() {
@@ -15,6 +16,9 @@ export default {
             message.success('这个是antui的成功消息弹框')
         }
         function msgClick2(){
+            nextTick(()=>{
+                console.log("哈哈哈");
+            })
         }
         return { msgClick,msgClick2 }
     },
