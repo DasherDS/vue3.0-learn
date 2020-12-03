@@ -97,6 +97,7 @@ export default {
     }
 }
 .weather{
+    font-family: "楷体";
     font-size: 18px;
     color: #3ca6ff;
     span{ color: #ff4d4f; }

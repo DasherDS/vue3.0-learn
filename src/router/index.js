@@ -163,6 +163,14 @@ const routes = [
         }
     },
     {
+        path:"/filters",
+        name:"Filter",
+        component:()=>import("../views/test-filters.vue"),
+        meta:{
+            index:21
+        }
+    },
+    {
         path: "/testindex",
         name: "Testindex",
         component: () => import("../views/test/index.vue"),
