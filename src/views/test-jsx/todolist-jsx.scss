@@ -1,0 +1,21 @@
+.jsx-main{
+    width: 500px;
+    margin: 0 auto;
+    h1{
+        color: cadetblue;
+    }
+    &-input{
+        display: inline-block;
+        width: 200px;
+    }
+    &-ul{
+        margin-top: 30px;
+        &-btn{
+            margin-left: 10px;
+        }
+    }
+    .jsx-done{
+        text-decoration: line-through;
+        color: rgb(201, 51, 51);
+    }
+}
