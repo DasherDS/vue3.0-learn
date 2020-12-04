@@ -1,6 +1,13 @@
 <template>
     <div>
         <h3>测试页面</h3>
+        <router-link to="/firstjsx">JSX页面的测试</router-link>
+        |
+        <router-link to="/todolistjsx" 
+            >直接跳转jsxTODOLIST</router-link
+        >
+        |
+        <hr style="margin:30px;" />
         <ul>
             <li>
                 <router-link to="/transitionclass" target="_blank">
@@ -57,7 +64,7 @@ import { ref } from "vue";
 export default {
     setup() {
         const locale = ref(zhCN);
-        const datevalue = ref('')
+        const datevalue = ref("");
         const router = useRouter();
         function chinese() {
             locale.value = zhCN;
@@ -70,7 +77,7 @@ export default {
             console.log(router);
             router.push({ name: "Request" });
         }
-        return { english, chinese, handleReq, locale,datevalue };
+        return { english, chinese, handleReq, locale, datevalue };
     },
 };
 </script>

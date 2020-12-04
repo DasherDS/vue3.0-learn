@@ -187,6 +187,14 @@ const routes = [
         }
     },
     {
+        path:'/todolistjsx',
+        name:"Todolistjsx",
+        component:()=>import("../views/test-jsx/todolist-jsx.jsx"),
+        meta:{
+            index:24
+        }
+    },
+    {
         path: "/testindex",
         name: "Testindex",
         component: () => import("../views/test/index.vue"),

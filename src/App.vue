@@ -46,7 +46,8 @@
             <router-link to="/computed">computed-计算属性</router-link> |
             <router-link to="/filters">filters过滤器</router-link> |
             <router-link to="/nextTick">NextTick</router-link> |
-            <router-link to="/firstjsx">JSX页面的测试</router-link> |
+            <router-link to="/firstjsx" >JSX页面的测试</router-link> |
+            <router-link to="/todolistjsx" >直接跳转jsxTODOLIST</router-link> |
             <router-link to="/testindex">测试DEMO</router-link> |
             <a-tooltip placement="bottom">
                 <template #title>
@@ -54,11 +55,16 @@
                 </template>
                 <a-button @click="jump" size="small" type="primary">点击跳转</a-button>
             </a-tooltip>
-            <router-view v-slot="{ Component }">
+
+            <!-- //这种推荐写法没办法和jsx兼容 -->
+            <!-- <router-view v-slot="{ Component }">
                 <transition :name="transitionName" mode="out-in">
-                    <component :is="Component"></component>
+                    <component :is="Component" />
                 </transition>
-            </router-view>
+            </router-view> -->
+            <transition :name="transitionName" mode="out-in">
+                    <router-view />
+            </transition>
         </div>
     </div>
 </template>
