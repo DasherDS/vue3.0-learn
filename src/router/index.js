@@ -179,6 +179,14 @@ const routes = [
         }
     },
     {
+        path:"/firstjsx",
+        name:"FirstJsx",
+        component:()=>import("../views/test-jsx/text-first.jsx"),
+        meta:{
+            index:23
+        }
+    },
+    {
         path: "/testindex",
         name: "Testindex",
         component: () => import("../views/test/index.vue"),

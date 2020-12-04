@@ -46,6 +46,7 @@
             <router-link to="/computed">computed-计算属性</router-link> |
             <router-link to="/filters">filters过滤器</router-link> |
             <router-link to="/nextTick">NextTick</router-link> |
+            <router-link to="/firstjsx">JSX页面的测试</router-link> |
             <router-link to="/testindex">测试DEMO</router-link> |
             <a-tooltip placement="bottom">
                 <template #title>
