@@ -1,22 +1,22 @@
 <template>
     <div>
         <h3>测试页面</h3>
-        <router-link to="/firstjsx">JSX页面的测试</router-link>
+        <router-link to="./firstjsx">JSX页面的测试</router-link>
         |
-        <router-link to="/todolistjsx" 
+        <router-link to="./todolistjsx" 
             >直接跳转jsxTODOLIST</router-link
         >
         |
         <hr style="margin:30px;" />
         <ul>
             <li>
-                <router-link to="/transitionclass" target="_blank">
+                <router-link to="./transitionclass" target="_blank">
                     <a-button type="primary">过渡效果的class</a-button>
                 </router-link>
             </li>
             <li>
                 <i class="a-icon-s-grid"></i>
-                <router-link to="/vuexproxy">
+                <router-link to="./vuexproxy">
                     <a-tag type="success">vuex测试</a-tag>
                 </router-link>
             </li>
@@ -26,7 +26,7 @@
                 >
             </li>
             <li>
-                <router-link to="/antuitest">AntdesignUI测试</router-link>
+                <router-link to="./antuitest">AntdesignUI测试</router-link>
             </li>
         </ul>
 

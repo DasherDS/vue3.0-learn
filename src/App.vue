@@ -19,36 +19,36 @@
         >
         </vue-particles>
         <div class="main">
-            <router-link to="/">Home</router-link> |
-            <router-link to="/about">About</router-link> |
-            <router-link to="/ref">Ref</router-link> |
-            <router-link to="/ref02">Ref02</router-link> |
-            <router-link to="/lifecycle">生命周期</router-link> |
-            <router-link to="/reactive">reactive</router-link> |
-            <router-link to="/toRef">toRef</router-link> |
-            <router-link to="/toRefs">toRefs</router-link> |
-            <router-link to="/shallowReactive">shallowReactive</router-link> |
-            <router-link to="/shallowRef">shallowRef</router-link> |
-            <router-link to="/toRaw">toRaw</router-link> |
-            <router-link to="/markRaw">markRaw</router-link> |
-            <router-link to="/provideinject">provide & inject</router-link> |
-            <router-link to="/watchwatchEffect"
+            <router-link to="./">Home</router-link> |
+            <router-link to="./about">About</router-link> |
+            <router-link to="./ref">Ref</router-link> |
+            <router-link to="./ref02">Ref02</router-link> |
+            <router-link to="./lifecycle">生命周期</router-link> |
+            <router-link to="./reactive">reactive</router-link> |
+            <router-link to="./toRef">toRef</router-link> |
+            <router-link to="./toRefs">toRefs</router-link> |
+            <router-link to="./shallowReactive">shallowReactive</router-link> |
+            <router-link to="./shallowRef">shallowRef</router-link> |
+            <router-link to="./toRaw">toRaw</router-link> |
+            <router-link to="./markRaw">markRaw</router-link> |
+            <router-link to="./provideinject">provide & inject</router-link> |
+            <router-link to="./watchwatchEffect"
                 >watch & watchEffect</router-link
             >
             |
-            <router-link to="/getCurrentInstance"
+            <router-link to="./getCurrentInstance"
                 >getCurrentInstance</router-link
             >
-            | <router-link to="/useStore">useStore</router-link> |
-            <router-link to="/getElement">获取标签元素</router-link> |
-            <router-link to="/todolist">TODOLIST</router-link> |
-            <router-link to="/todolist02">TODOLIST02</router-link> |
-            <router-link to="/computed">computed-计算属性</router-link> |
-            <router-link to="/filters">filters过滤器</router-link> |
-            <router-link to="/nextTick">NextTick</router-link> |
-            <router-link to="/firstjsx" >JSX页面的测试</router-link> |
-            <router-link to="/todolistjsx" >直接跳转jsxTODOLIST</router-link> |
-            <router-link to="/testindex">测试DEMO</router-link> |
+            | <router-link to="./useStore">useStore</router-link> |
+            <router-link to="./getElement">获取标签元素</router-link> |
+            <router-link to="./todolist">TODOLIST</router-link> |
+            <router-link to="./todolist02">TODOLIST02</router-link> |
+            <router-link to="./computed">computed-计算属性</router-link> |
+            <router-link to="./filters">filters过滤器</router-link> |
+            <router-link to="./nextTick">NextTick</router-link> |
+            <router-link to="./firstjsx" >JSX页面的测试</router-link> |
+            <router-link to="./todolistjsx" >直接跳转jsxTODOLIST</router-link> |
+            <router-link to="./testindex">测试DEMO</router-link> |
             <a-tooltip placement="bottom">
                 <template #title>
                     <span> {{txtTip}}</span>
