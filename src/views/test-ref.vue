@@ -30,6 +30,8 @@ export default {
         return { number, add, clear };
     },
 };
+// 测试git分支
+
 /***
  * 在Vue2中，我们访问 data 或 props 中的变量，都是通过类似 this.number 这样的形式去获取的，
  * 但要特别注意的是，在setup中，this 指向的是 undefined，也就是说不能再向Vue2一样通过 this 去获取变量了
